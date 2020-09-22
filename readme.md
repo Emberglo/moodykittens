@@ -18,7 +18,7 @@ The basic design and layout for this app has been mocked out and the names of th
 - A Kitten's name and mood must be visible for the user 
 - A custom Google Font must be added
 - Kittens are visible when the page reloads - store to local storage
-- A Kitten's mood must affect visually the apperance of the kitten
+- A Kitten's mood must affect visually the appearance of the kitten
 
 
 #### Functionality 
