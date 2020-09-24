@@ -36,6 +36,7 @@ main {
 }
 footer {
 	height: 40px;
+	bottom: 0;
 }
 
 p {
