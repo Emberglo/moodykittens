@@ -56,6 +56,10 @@ label {
 	font-size: 12pt;
 }
 
+i {
+	cursor: pointer;
+}
+
 input {
 	width: 100%;
 	padding: .375rem .75rem;
@@ -73,7 +77,7 @@ input:focus {
 
 button {
 	background-color: var(--dark);
-	color: var(--light);
+	color: var(--primary-lighten);
 	border: none;
 	border-radius: var(--corners);
 	box-shadow: var(--shadow);
@@ -88,6 +92,7 @@ button:focus {
 }
 button:hover {
 	background-color: var(--primary-lighten);
+	color: var(--dark-lighten);
 }
 
 button.btn-special {
@@ -152,6 +157,9 @@ button.btn-special:hover {
 }
 .kitten.Gone {
 	color: var(--danger);
+	/*pointer-events: none;*/
+}
+.kitten.Gone.mood-buttons {
 	pointer-events: none;
 }
 

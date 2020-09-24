@@ -67,8 +67,8 @@ function drawKittens() {
 				<div id="kittenMood">${kitten.mood}</div>
 				<div id="kittenAffection">${kitten.affection}</div>
 				<div class="d-row">
-					<button onclick="pet('${kitten.id}')">Pats</button>
-					<button onclick="catnip('${kitten.id}')">Gravy</button>
+					<button class="${kitten.mood} kitten mood-buttons" onclick="pet('${kitten.id}')">Pats</button>
+					<button class="${kitten.mood} kitten mood-buttons" onclick="catnip('${kitten.id}')">Gravy</button>
 				</div>
 				<div>
 					<span class="text-danger">
@@ -138,23 +138,14 @@ function catnip(id) {
  * @param {Kitten} kitten
  */
 function setKittenMood(kitten) {
-	//check value of affection
 	if (kitten.affection >= 6) {
-		//change value of mood based on affection
 		kitten.mood = 'Happy';
-		//document.getElementById(`${kitten.id}`).classList.add('happy');
 	} else if (kitten.affection <= 5 && kitten.affection > 3) {
-		//change value of mood based on affection
 		kitten.mood = 'Tolerant';
-		//document.getElementById(`${kitten.id}`).classList.add('tolerant');
 	} else if (kitten.affection > 0 && kitten.affection <= 3) {
-		//change value of mood based on affection
 		kitten.mood = 'Angry';
-		//document.getElementById(`${kitten.id}`).classList.add('angry');
 	} else if (kitten.affection <= 0) {
-		//change value of mood based on affection
 		kitten.mood = 'Gone';
-		//document.getElementsByClassName(`${kitten.id}`).classList.add('gone');
 	}
 }
 
