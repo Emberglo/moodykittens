@@ -35,7 +35,7 @@ main {
 	min-height: calc(95vh - (120px + 80px));
 }
 footer {
-	height: 80px;
+	height: 40px;
 }
 
 p {
@@ -142,6 +142,7 @@ button.btn-special:hover {
 .kitten img {
 	filter: drop-shadow(2px 4px 6px #1b1b1b);
 	transition: all .35s ease;
+	margin: .5em auto;
 }
 .kitten.Happy img {
 	filter: drop-shadow(2px 4px 6px #00ffb3);
@@ -167,7 +168,7 @@ button.btn-special:hover {
 	color: var(--dark-lighten);
 	font-size: 1.2em;
 	font-weight: 600;
-	margin-top: .5em;
+	margin-top: 0;
 }
 
 #kittenMood {
