@@ -35,7 +35,7 @@ main {
 	min-height: calc(95vh - (120px + 80px));
 }
 footer {
-	height: 120px;
+	height: 80px;
 }
 
 p {
@@ -44,6 +44,7 @@ p {
 
 img {
 	max-width: 100%;
+	margin-top: 5px;
 }
 
 form {
@@ -71,7 +72,7 @@ input:focus {
 }
 
 button {
-	background-color: var(--primary);
+	background-color: var(--dark);
 	color: var(--light);
 	border: none;
 	border-radius: var(--corners);
@@ -80,6 +81,7 @@ button {
 	transition: all .2s ease;
 	cursor: pointer;
 	padding: .5em;
+	margin: .5em .5em;
 }
 button:focus {
 	outline: none;
@@ -123,6 +125,11 @@ button.btn-special:hover {
 	border-radius: var(--corners);
 }
 
+.card.kitten {
+	width: 21%;
+	margin: 1em auto;
+}
+
 .shadow {
 	filter: drop-shadow(var(--shadow));
 }
@@ -131,21 +138,32 @@ button.btn-special:hover {
 	filter: drop-shadow(2px 4px 6px #1b1b1b);
 	transition: all .35s ease;
 }
-.kitten.happy img {
+.kitten.Happy img {
 	filter: drop-shadow(2px 4px 6px #00ffb3);
 }
-.kitten.tolerant img {
+.kitten.Tolerant img {
 	filter: drop-shadow(2px 4px 6px #646464);
 }
-.kitten.angry img {
+.kitten.Angry img {
 	filter: drop-shadow(2px 4px 6px #ff0000) contrast(1);
 }
-.kitten.gone img {
+.kitten.Gone img {
 	filter: drop-shadow(2px 4px 6px #ff0000) contrast(0);
 }
-.kitten.gone {
+.kitten.Gone {
 	color: var(--danger);
 	pointer-events: none;
+}
+
+#kittenName {
+	color: var(--dark-lighten);
+	font-size: 1.2em;
+	font-weight: 600;
+	margin-top: .5em;
+}
+
+#kittenMood {
+	margin-bottom: .25em;
 }
 
 .bg-dark {
@@ -286,4 +304,9 @@ button.btn-special:hover {
 
 .hidden {
 	display: none !important;
+}
+
+::placeholder {
+	color: var(--light);
+	opacity: 1;
 }
