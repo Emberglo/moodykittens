@@ -17,14 +17,23 @@ function addKitten(event) {
 	event.preventDefault();
 	let form = event.target;
 
-	let kitten = {
-		id        : generateId(),
-		name      : form.name.value,
-		mood      : 'Tolerant',
-		affection : 5
-	};
-	kittens.push(kitten);
-	saveKittens();
+	let kittenName = form.name.value;
+	let kittenId = generateId();
+	let hazKitten = kittens.find((kitten) => kitten.name == kittenName);
+
+	if (hazKitten) {
+		alert('You already have this kitten!');
+	} else {
+		let kitten = {
+			id        : kittenId,
+			name      : kittenName,
+			mood      : 'Tolerant',
+			affection : 5
+		};
+		kittens.push(kitten);
+		saveKittens();
+	}
+
 	form.reset();
 }
 
